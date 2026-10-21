@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run BookHaven (Main)",
+      "request": "launch",
+      "mainClass": "com.library.Main",
+      "console": "integratedTerminal",
+      "encoding": "UTF-8"
+    }
+  ]
+}

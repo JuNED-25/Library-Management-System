@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Java Project",
+      "type": "shell",
+      "command": "javac",
+      "args": [
+        "--release", "17",
+        "-encoding", "UTF-8",
+        "-cp", "lib/*",
+        "-d", "bin",
+        "src/com/library/*.java",
+        "src/com/library/config/*.java",
+        "src/com/library/model/*.java",
+        "src/com/library/dao/*.java",
+        "src/com/library/service/*.java",
+        "src/com/library/util/*.java",
+        "src/com/library/ui/*.java"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$javac"]
+    },
+    {
+      "label": "Run Application (Terminal)",
+      "type": "shell",
+      "command": "java",
+      "args": [
+        "-cp", "bin;lib/*",
+        "com.library.Main"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true,
+        "panel": "shared"
+      }
+    }
+  ]
+}
